@@ -1,8 +1,8 @@
 import axios from "axios";
 import Image from "next/image";
-import { useCallback, useState } from "react";
 import logo from "../public/images/logo.png";
 import Input from "./components/Input";
+import { useCallback, useState } from "react";
 import { signIn } from "next-auth/react";
 import { FcGoogle } from 'react-icons/fc';
 import { FaGithub } from 'react-icons/fa';
