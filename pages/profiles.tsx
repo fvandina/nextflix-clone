@@ -3,7 +3,7 @@ import { getSession } from "next-auth/react";
 import Image from "next/image";
 import imgProfile from "../public/images/default-blue.png";
 import { useRouter } from "next/router";
-import userCurrentUser from "@/hooks/useCurrentUser";
+import useCurrentUser from "@/hooks/useCurrentUser";
 
 export async function getServerSideProps(context:NextPageContext) {
   const session = await getSession(context);
@@ -24,7 +24,7 @@ export async function getServerSideProps(context:NextPageContext) {
 
 const Profiles = () =>{
   const router = useRouter();
-  const {data: user} = userCurrentUser();
+  const {data: user} = useCurrentUser();
 
   return (
     <div className="flex items-center h-full justify-center">
