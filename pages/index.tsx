@@ -1,11 +1,11 @@
 import { NextPageContext } from 'next';
 import { getSession } from 'next-auth/react';
-import Navbar from './components/Navbar';
-import Billboard from './Billboard';
-import MovieList from './components/MovieList';
+import Navbar from '../components/Navbar';
+import MovieList from '../components/MovieList';
 import useCurrentUser from '@/hooks/useCurrentUser';
 import useMovieList from '@/hooks/useMovieList';
 import useFavorites from '@/hooks/useFavorites';
+import Billboard from '@/components/Billboard';
 
 export async function getServerSideProps(context: NextPageContext) {
   const session = await getSession(context);

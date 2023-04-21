@@ -1,5 +1,6 @@
 import {AiOutlineInfoCircle} from "react-icons/ai";
 import useBillboard from "@/hooks/useBillboard";
+import PlayButton from "./PlayButton";
 
 
 const Billboard = () => {
@@ -54,6 +55,7 @@ const Billboard = () => {
           md:mt-4
           gap-3
         ">
+          <PlayButton movieId={data?.id} />
           <button 
           className="
             bg-white
